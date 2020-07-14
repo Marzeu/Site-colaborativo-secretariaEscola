@@ -1,15 +1,3 @@
-var rowTable = document.querySelector('tbody');
-// <div>(Tela 1) Professores Matriculados</div>
-
-
-//       <div>(Tela 2) Informações Alunos
-//       </div>
-
-//       <div>(Tela 3) Cadastramento de turmas
-//       </div>
-
-//deixar aqui pra vermos
-
 // função que lista professores////
 
 var teacher = {
@@ -25,14 +13,6 @@ var teacher = {
     ],
 };
 
-// function createRow(text) {
-//     var div = document.getElementById('teacher');
-//     var row = document.createTextNode(text);
-
-//     for (i = 0; i < text.length; i++) {
-
-//     }
-// }
 
 function createTable(text) {
     const div = document.getElementById('createTable');
@@ -43,8 +23,6 @@ function createTable(text) {
         div.appendChild(p);
     };
 };
-
-
 
 //função que lista alunos e pagamentos//
 

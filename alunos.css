@@ -1,6 +1,5 @@
 body {
-    background-color: #fff;
-    
+    background-color: #ccc;
 }
 
 body h3 {
@@ -46,21 +45,12 @@ li {
 }
 
 div {
-    margin-top:10px;
-    margin-bottom:80px;
-   
+    margin-top: 10px;
+    margin-bottom: 80px;
 }
 
 table {
-    
-    margin:0 auto;
-    
-}
-
- th{
- 
-     
-   
+    margin: 0 auto;
 }
 
 footer {
