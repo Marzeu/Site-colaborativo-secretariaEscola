@@ -13,7 +13,8 @@ div {
 }
 
 table {
-  margin: 10px 0; /* margin: 10px auto; */
+  margin: 10px auto;
+  font-size: 18pt;
 }
 
 table tr input {
@@ -31,3 +32,5 @@ table tr input {
   padding: 5px 5px 5px 5px;
   border-style: none;
 }
+
+
