@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Alunos matriculados</title>
   <link rel="stylesheet" href="./estilos/geral.css" />
   <link rel="stylesheet" href="./estilos/alunos.css" />
 </head>
 
-<body onload="createTable(students)">
+<body onload="listStudent()">
   <h2>Escola Professor Marcos Bruno</h2>
 
   <nav id="menu">
@@ -32,20 +32,21 @@
     </ul>
   </nav>
 
-  <div id="alunosMatriculados">
+<div id="alunosMatriculados">
     <h3>Alunos matriculados</h3>
 
-    <table id="students" style="width:50%">
+    <table id="student" style="width:50%">
       <tr id="titulo">
         <th>Aluno(a)</th>
         <th>Status de pagamento</th>
+        <th>Turma</th>
+        <th>Professor</th>
       </tr>
     </table>
 
-
     </button>
-  </div>
 
+    <button id="cadastroAlunos">Cadastrar</button>
   <footer>
     <p>Site desenvolvido em parceria com o Senai-SC</p>
     <img src="https://logodownload.org/wp-content/uploads/2016/10/sesi-logo-12.png" alt="" />
