@@ -1,18 +1,11 @@
-// Objeto de alunos
-var student = {
-  id: "students",
-  students: [{ name: "Alice", status: "Pago", turma: "101", teacher: "Marcos" }]
-};
-
 //Objeto de professores
+
 var teacher = {
-  id: "teacher",
   teachers: [{ name: "Lara", classes: "Francês" },
   { name: "Marzeu", classes: "Física" },
   { name: "Almir", classes: "Matemática" },
   { name: "Diogo", classes: "Biologia" },
-  { name: "Sheila", classes: "Biologia" }
-  ]
+  { name: "Sheila", classes: "Biologia" }]
 };
 
 // Função responsável por criar a tabela dinamina tanto para alunos quanto para professores
@@ -51,7 +44,7 @@ function listStudent() {
     let fourthData = document.createElement('td');
     fourthData.style.textAlign = "center";
     firstData.innerHTML = `${classes.students[j].name}`; secondData.innerHTML = `${classes.students[j].status}`;
-    thirdData.innerHTML = `${classes.students[j].classNane}`;
+    thirdData.innerHTML = `${classes.students[j].className}`;
     fourthData.innerHTML = `${classes.students[j].teacher}`;
     createRow.appendChild(firstData);
     createRow.appendChild(secondData);
@@ -62,14 +55,38 @@ function listStudent() {
   };
 };
 
-function add() {
+var classes = {
+  students: [{}]
+};
+
+//armazenar os dados no navagador
+function createlocalData() {
+  classes.students = JSON.parse(localStorage.getItem('data'));
+
+  if (classes.students == null) {
+    classes.students = [];
+  }
+
   let classeName = document.getElementById('classId').value;
   let studentName = document.getElementById('studentId').value;
   let teacherName = document.getElementById('teacherId').value;
-  classes.students.push({ name: `${studentName}`, status: "Pago", classNane: `${classeName}`, teacher: `${teacherName}` });
-  console.log(classes);
+  classes.students.push({ name: `${studentName}`, status: "Pago", className: `${classeName}`, teacher: `${teacherName}` });
+
+  let classesJson = JSON.stringify(classes.students);
+  localStorage.setItem('data', classesJson);
+
+  alert("Cadastro realizado com sucesso");
+  location.reload();
 };
 
-var classes = {
-  students: [{ name: "Alice", status: "Pago", classNane: "101", teacher: "Marcos" }]
+
+function listData() {
+  classes.students = JSON.parse(localStorage.getItem('data'));
+  if (typeof (Storage) !== "undefined") {
+
+    if (classes == null) {
+      classes = {};
+    };
+  };
+  listStudent();
 };
